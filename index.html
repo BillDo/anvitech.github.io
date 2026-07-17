@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anvitech - Công ty Kỹ thuật Cơ Điện & Năng lượng</title>
-    <!-- Tích hợp Tailwind CSS để tạo giao diện nhanh -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Tích hợp Font chữ Inter hiện đại -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Cấu hình màu sắc thương hiệu theo logo Anvitech -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome cho Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Font chữ Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Cấu hình màu sắc -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        navy: '#1E3A8A',   /* Xanh Navy chủ đạo */
-                        orange: '#F97316', /* Cam điểm nhấn */
+                        navy: '#1E3A8A',   /* Xanh Navy logo */
+                        navyDark: '#172554', 
+                        orange: '#F97316', /* Cam logo */
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -26,109 +32,256 @@
         }
     </script>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+<body class="font-sans text-gray-700 antialiased bg-gray-50">
 
-    <!-- Header / Menu điều hướng -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <!-- Hiển thị Logo -->
-                <img src="antitech.jpg" alt="Anvitech Logo" class="h-12 object-contain rounded">
+    <!-- Topbar (Phong cách Bulidx) -->
+    <div class="bg-navyDark text-gray-300 text-sm py-2 hidden md:block">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex space-x-6">
+                <span><i class="fa-regular fa-clock text-orange mr-2"></i>Thứ 2 - Thứ 7: 8:00 - 17:30</span>
+                <span><i class="fa-solid fa-location-dot text-orange mr-2"></i>Hà Nội, Việt Nam</span>
             </div>
-            <nav class="hidden md:flex gap-8 font-semibold text-gray-700">
-                <a href="#about" class="hover:text-orange transition duration-300">Về chúng tôi</a>
-                <a href="#services" class="hover:text-orange transition duration-300">Dịch vụ</a>
-                <a href="#contact" class="hover:text-orange transition duration-300">Liên hệ</a>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-orange transition"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-orange transition"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header (Luồng HQN) -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#">
+                <img src="antitech.jpg" alt="Anvitech Logo" class="h-14 object-contain">
+            </a>
+            
+            <!-- Menu -->
+            <nav class="hidden lg:flex space-x-8 font-bold text-navy">
+                <a href="#" class="text-orange">Trang chủ</a>
+                <a href="#about" class="hover:text-orange transition">Giới thiệu</a>
+                <a href="#services" class="hover:text-orange transition">Dịch vụ</a>
+                <a href="#projects" class="hover:text-orange transition">Dự án</a>
+                <a href="#contact" class="hover:text-orange transition">Liên hệ</a>
             </nav>
+
+            <!-- Hotline Button -->
+            <div class="hidden md:flex items-center gap-4">
+                <div class="text-right">
+                    <p class="text-xs text-gray-500 font-semibold">Gọi ngay để tư vấn</p>
+                    <p class="text-navy font-bold text-lg">09xx.xxx.xxx</p>
+                </div>
+                <a href="tel:090000000" class="bg-orange text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-orange-600 transition shadow-lg">
+                    <i class="fa-solid fa-phone-volume"></i>
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section (Phần giới thiệu mở đầu) -->
-    <section id="about" class="bg-navy text-white py-20 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Giải pháp Kỹ thuật Toàn diện cho Dân dụng & Công nghiệp</h1>
-            <p class="text-lg md:text-xl mb-10 text-gray-200">
-                Anvitech tự hào là đơn vị chuyên nghiệp cung cấp các dịch vụ thi công, lắp đặt Năng lượng mặt trời, Hệ thống Cơ - Điện - Lạnh, Gia công Cơ khí và Hệ thống Thang máy nâng hạ.
-            </p>
-            <a href="#contact" class="bg-orange text-white px-8 py-3 rounded-full font-bold text-lg hover:bg-orange-600 transition duration-300 shadow-lg">
-                Nhận tư vấn ngay
-            </a>
-        </div>
-    </section>
-
-    <!-- Services Section (Danh mục dịch vụ từ Excel) -->
-    <section id="services" class="max-w-7xl mx-auto py-20 px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-navy mb-4">Lĩnh Vực Hoạt Động</h2>
-            <div class="w-24 h-1 bg-orange mx-auto rounded"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Khối 1: Năng lượng mặt trời -->
-            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-300 group">
-                <div class="text-orange text-5xl mb-6 transform group-hover:scale-110 transition duration-300">☀️</div>
-                <h3 class="text-xl font-bold text-navy mb-3">Năng Lượng Mặt Trời</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    Lắp đặt hệ thống điện mặt trời hiệu suất cao cho dân dụng (gia đình, chung cư) và công nghiệp (nhà máy, nhà xưởng).
+    <!-- Hero Banner -->
+    <section class="relative h-[600px] flex items-center">
+        <!-- Ảnh nền (Thay bằng ảnh công trình thật của bạn) -->
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888086225-f6735e29fbd3?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div>
+        <!-- Lớp phủ tối -->
+        <div class="absolute inset-0 bg-navyDark/70"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 w-full">
+            <div class="max-w-3xl">
+                <span class="inline-block px-4 py-1 bg-orange text-white font-bold text-sm tracking-wider mb-4 border-l-4 border-white">ANVITECH M.E.P</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6 uppercase">
+                    Giải pháp kỹ thuật <br> <span class="text-orange">toàn diện</span>
+                </h1>
+                <p class="text-lg text-gray-200 mb-8 max-w-xl">
+                    Chuyên gia hàng đầu trong thi công Cơ - Điện - Lạnh, Năng lượng mặt trời, Gia công cơ khí và Hệ thống thang máy tự động.
                 </p>
-            </div>
-
-            <!-- Khối 2: Lắp đặt điện -->
-            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-300 group">
-                <div class="text-orange text-5xl mb-6 transform group-hover:scale-110 transition duration-300">⚡</div>
-                <h3 class="text-xl font-bold text-navy mb-3">Hệ Thống Điện</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    Thi công hệ thống điện Smart Home, tủ điện công nghiệp, mạng lưới LAN, Camera an ninh và trạm máy phát điện kết nối tự động.
-                </p>
-            </div>
-
-            <!-- Khối 3: Cơ điện lạnh -->
-            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-300 group">
-                <div class="text-orange text-5xl mb-6 transform group-hover:scale-110 transition duration-300">❄️</div>
-                <h3 class="text-xl font-bold text-navy mb-3">Cơ Điện Lạnh</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    Lắp đặt điều hòa trung tâm (Chiller, AHU), hệ thống thông gió, cân bằng áp suất và thiết bị phụ trợ xử lý nước thải.
-                </p>
-            </div>
-
-            <!-- Khối 4: Cơ khí -->
-            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-300 group">
-                <div class="text-orange text-5xl mb-6 transform group-hover:scale-110 transition duration-300">🏗️</div>
-                <h3 class="text-xl font-bold text-navy mb-3">Gia Công Cơ Khí</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    Thiết kế và gia công kết cấu thép chịu lực, cửa nhôm hệ, khung bảo vệ, bàn thao tác và nội thất kim loại thẩm mỹ.
-                </p>
-            </div>
-
-            <!-- Khối 5: Thang máy & Nâng hạ -->
-            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-300 group">
-                <div class="text-orange text-5xl mb-6 transform group-hover:scale-110 transition duration-300">🛗</div>
-                <h3 class="text-xl font-bold text-navy mb-3">Thang Máy & Nâng Hạ</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    Cung cấp giải pháp thang máy gia đình, thang tải hàng, sàn nâng tự động (Dock Leveler) và bàn nâng thủy lực công nghiệp.
-                </p>
+                <div class="flex gap-4">
+                    <a href="#services" class="bg-orange hover:bg-white hover:text-navy text-white font-bold py-3 px-8 transition duration-300">
+                        XEM DỊCH VỤ
+                    </a>
+                    <a href="#contact" class="bg-transparent border border-white text-white hover:bg-white hover:text-navy font-bold py-3 px-8 transition duration-300">
+                        LIÊN HỆ
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer / Liên hệ -->
-    <footer id="contact" class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-orange">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+    <!-- About Section (Bố cục 50/50 HQN) -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <!-- Cột ảnh -->
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop" alt="Về Anvitech" class="rounded shadow-xl z-10 relative">
+                <!-- Khối trang trí Bulidx style -->
+                <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-orange -z-10 rounded"></div>
+                <div class="absolute top-1/2 -translate-y-1/2 -right-12 bg-navy text-white p-6 rounded shadow-lg hidden lg:block">
+                    <h3 class="text-4xl font-extrabold text-orange mb-1">10+</h3>
+                    <p class="font-bold">Năm Kinh Nghiệm</p>
+                </div>
+            </div>
+            
+            <!-- Cột nội dung -->
             <div>
-                <img src="antitech.jpg" alt="Anvitech Logo" class="h-16 object-contain rounded bg-white p-1 mb-6">
-                <p class="text-gray-400 max-w-sm">
-                    Đơn vị hàng đầu cung cấp giải pháp lắp đặt kỹ thuật và gia công cơ khí chất lượng cao tại Việt Nam.
+                <h4 class="text-orange font-bold uppercase tracking-wider mb-2">Về Chúng Tôi</h4>
+                <h2 class="text-3xl md:text-4xl font-bold text-navy mb-6">Đối Tác Đáng Tin Cậy Của Mọi Công Trình</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Được thành lập với sứ mệnh mang đến những giải pháp kỹ thuật ưu việt, <strong>Anvitech</strong> tự hào sở hữu đội ngũ kỹ sư giàu kinh nghiệm, chuyên môn cao. Chúng tôi cung cấp dịch vụ từ tư vấn, thiết kế, thi công đến bảo trì cho cả mảng dân dụng và công nghiệp.
                 </p>
-            </div>
-            <div class="md:text-right">
-                <h3 class="text-2xl font-bold mb-6 text-white">Liên hệ với chúng tôi</h3>
-                <p class="text-gray-300 mb-2"><strong class="text-white">Hotline:</strong> Đang cập nhật...</p>
-                <p class="text-gray-300 mb-2"><strong class="text-white">Email:</strong> contact@anvitech.com.vn</p>
-                <p class="text-gray-300"><strong class="text-white">Địa chỉ:</strong> Đang cập nhật...</p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange mr-3"></i> Đảm bảo tiến độ, chất lượng thi công khắt khe nhất.
+                    </li>
+                    <li class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange mr-3"></i> Áp dụng công nghệ tiên tiến, tối ưu chi phí vận hành.
+                    </li>
+                    <li class="flex items-center text-gray-700">
+                        <i class="fa-solid fa-check text-orange mr-3"></i> Chính sách bảo hành dài hạn, bảo trì chuyên nghiệp.
+                    </li>
+                </ul>
+                <a href="#contact" class="text-navy font-bold hover:text-orange transition border-b-2 border-orange pb-1 inline-flex items-center">
+                    TÌM HIỂU THÊM <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+                </a>
             </div>
         </div>
-        <div class="text-center text-gray-500 text-sm border-t border-gray-800 pt-8">
-            &copy; 2026 Anvitech. All rights reserved.
+    </section>
+
+    <!-- Services Section (Bulidx Cards) -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h4 class="text-orange font-bold uppercase tracking-wider mb-2">Lĩnh Vực Của Chúng Tôi</h4>
+                <h2 class="text-3xl md:text-4xl font-bold text-navy">Dịch Vụ Nổi Bật</h2>
+                <div class="w-16 h-1 bg-orange mx-auto mt-4"></div>
+            </div>
+
+            <!-- CSS Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 group hover:-translate-y-2 transition duration-300 border-b-4 border-transparent hover:border-orange shadow-sm hover:shadow-xl relative overflow-hidden">
+                    <div class="text-orange text-4xl mb-6"><i class="fa-solid fa-solar-panel"></i></div>
+                    <h3 class="text-xl font-bold text-navy mb-4 group-hover:text-orange transition">Năng Lượng Mặt Trời</h3>
+                    <p class="text-gray-600 mb-6">Hệ thống điện năng lượng mặt trời cho gia đình, nhà xưởng, chung cư. Tối ưu năng lượng, tiết kiệm chi phí.</p>
+                    <a href="#" class="text-navy font-bold group-hover:text-orange text-sm"><i class="fa-solid fa-plus mr-1"></i> CHI TIẾT</a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 group hover:-translate-y-2 transition duration-300 border-b-4 border-transparent hover:border-orange shadow-sm hover:shadow-xl relative overflow-hidden">
+                    <div class="text-orange text-4xl mb-6"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+                    <h3 class="text-xl font-bold text-navy mb-4 group-hover:text-orange transition">Thi Công Hệ Thống Điện</h3>
+                    <p class="text-gray-600 mb-6">Tủ điện phân phối, Smart Home, Camera, hệ thống điện nhẹ, tủ bù và trạm máy phát điện công nghiệp.</p>
+                    <a href="#" class="text-navy font-bold group-hover:text-orange text-sm"><i class="fa-solid fa-plus mr-1"></i> CHI TIẾT</a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 group hover:-translate-y-2 transition duration-300 border-b-4 border-transparent hover:border-orange shadow-sm hover:shadow-xl relative overflow-hidden">
+                    <div class="text-orange text-4xl mb-6"><i class="fa-solid fa-snowflake"></i></div>
+                    <h3 class="text-xl font-bold text-navy mb-4 group-hover:text-orange transition">Cơ Điện Lạnh (HVAC)</h3>
+                    <p class="text-gray-600 mb-6">Điều hòa trung tâm Chiller, VRV/VRF, xử lý không khí AHU, thông gió và làm mát nhà xưởng chuyên nghiệp.</p>
+                    <a href="#" class="text-navy font-bold group-hover:text-orange text-sm"><i class="fa-solid fa-plus mr-1"></i> CHI TIẾT</a>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-8 group hover:-translate-y-2 transition duration-300 border-b-4 border-transparent hover:border-orange shadow-sm hover:shadow-xl relative overflow-hidden">
+                    <div class="text-orange text-4xl mb-6"><i class="fa-solid fa-gears"></i></div>
+                    <h3 class="text-xl font-bold text-navy mb-4 group-hover:text-orange transition">Gia Công Cơ Khí</h3>
+                    <p class="text-gray-600 mb-6">Kết cấu thép công nghiệp, cửa nhôm kính, khung bảo vệ, bàn thao tác, kệ kho Inox theo yêu cầu.</p>
+                    <a href="#" class="text-navy font-bold group-hover:text-orange text-sm"><i class="fa-solid fa-plus mr-1"></i> CHI TIẾT</a>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white p-8 group hover:-translate-y-2 transition duration-300 border-b-4 border-transparent hover:border-orange shadow-sm hover:shadow-xl relative overflow-hidden">
+                    <div class="text-orange text-4xl mb-6"><i class="fa-solid fa-elevator"></i></div>
+                    <h3 class="text-xl font-bold text-navy mb-4 group-hover:text-orange transition">Thang Máy & Nâng Hạ</h3>
+                    <p class="text-gray-600 mb-6">Thang máy gia đình, tải hàng. Sàn nâng tự động (Dock Leveler), bàn nâng và xe nâng thủy lực.</p>
+                    <a href="#" class="text-navy font-bold group-hover:text-orange text-sm"><i class="fa-solid fa-plus mr-1"></i> CHI TIẾT</a>
+                </div>
+                
+                <!-- Khối liên hệ nhanh (Thay cho ô trống thứ 6) -->
+                <div class="bg-navy p-8 flex flex-col justify-center items-center text-center shadow-xl">
+                    <div class="text-white text-5xl mb-4"><i class="fa-solid fa-headset"></i></div>
+                    <h3 class="text-xl font-bold text-white mb-2">Cần Tư Vấn Kỹ Thuật?</h3>
+                    <p class="text-gray-300 mb-4 text-sm">Gửi yêu cầu ngay để nhận báo giá chi tiết</p>
+                    <a href="#contact" class="bg-orange hover:bg-white hover:text-navy text-white font-bold py-2 px-6 transition duration-300">
+                        LIÊN HỆ NGAY
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section (Bulidx style banner) -->
+    <section class="bg-navyDark py-16 relative">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-gray-700">
+            <div>
+                <div class="text-4xl font-extrabold text-orange mb-2">500+</div>
+                <div class="text-white font-semibold">Dự án hoàn thành</div>
+            </div>
+            <div>
+                <div class="text-4xl font-extrabold text-orange mb-2">50+</div>
+                <div class="text-white font-semibold">Kỹ sư chuyên gia</div>
+            </div>
+            <div>
+                <div class="text-4xl font-extrabold text-orange mb-2">100%</div>
+                <div class="text-white font-semibold">Cam kết tiến độ</div>
+            </div>
+            <div>
+                <div class="text-4xl font-extrabold text-orange mb-2">24/7</div>
+                <div class="text-white font-semibold">Hỗ trợ kỹ thuật</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-gray-400 pt-16 pb-8 border-t-[5px] border-orange">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12 mb-12">
+            <!-- Cột 1 -->
+            <div>
+                <div class="bg-white inline-block p-2 rounded mb-6">
+                    <img src="antitech.jpg" alt="Anvitech Logo" class="h-12 object-contain">
+                </div>
+                <p class="mb-6 leading-relaxed">
+                    Anvitech tự hào là nhà thầu cung cấp giải pháp Cơ - Điện - Lạnh, Năng lượng mặt trời và Cơ khí công nghiệp hàng đầu, kiến tạo những công trình bền vững.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-gray-800 flex items-center justify-center hover:bg-orange text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 flex items-center justify-center hover:bg-orange text-white transition"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Cột 2 -->
+            <div>
+                <h4 class="text-white text-xl font-bold mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-1 after:bg-orange">Dịch vụ chính</h4>
+                <ul class="space-y-3">
+                    <li><a href="#" class="hover:text-orange transition"><i class="fa-solid fa-chevron-right text-xs mr-2 text-orange"></i>Năng lượng mặt trời</a></li>
+                    <li><a href="#" class="hover:text-orange transition"><i class="fa-solid fa-chevron-right text-xs mr-2 text-orange"></i>Thi công điện dân dụng & CN</a></li>
+                    <li><a href="#" class="hover:text-orange transition"><i class="fa-solid fa-chevron-right text-xs mr-2 text-orange"></i>Hệ thống cơ điện lạnh</a></li>
+                    <li><a href="#" class="hover:text-orange transition"><i class="fa-solid fa-chevron-right text-xs mr-2 text-orange"></i>Gia công lắp ráp cơ khí</a></li>
+                    <li><a href="#" class="hover:text-orange transition"><i class="fa-solid fa-chevron-right text-xs mr-2 text-orange"></i>Hệ thống thang máy, nâng hạ</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột 3 -->
+            <div>
+                <h4 class="text-white text-xl font-bold mb-6 relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-1 after:bg-orange">Thông tin liên hệ</h4>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fa-solid fa-location-dot mt-1 mr-4 text-orange text-lg"></i>
+                        <span>Tòa nhà XYZ, Đường ABC, Quận Đống Đa, Hà Nội</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-solid fa-phone mt-1 mr-4 text-orange text-lg"></i>
+                        <span class="font-bold text-white">09xx.xxx.xxx</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fa-solid fa-envelope mt-1 mr-4 text-orange text-lg"></i>
+                        <span>contact@anvitech.com.vn</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-800 text-center pt-8 text-sm">
+            <p>&copy; 2026 Anvitech. Bảo lưu mọi quyền. Thiết kế theo phong cách Bulidx & HQN.</p>
         </div>
     </footer>
 
