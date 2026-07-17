@@ -20,9 +20,9 @@
             theme: {
                 extend: {
                     colors: {
-                        navy: '#1E3A8A',   /* Xanh Navy logo */
+                        navy: '#1E3A8A',
                         navyDark: '#172554', 
-                        orange: '#F97316', /* Cam logo */
+                        orange: '#F97316',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -34,7 +34,7 @@
 </head>
 <body class="font-sans text-gray-700 antialiased bg-gray-50">
 
-    <!-- Topbar (Phong cách Bulidx) -->
+    <!-- Topbar -->
     <div class="bg-navyDark text-gray-300 text-sm py-2 hidden md:block">
         <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
             <div class="flex space-x-6">
@@ -48,7 +48,7 @@
         </div>
     </div>
 
-    <!-- Header (Luồng HQN) -->
+    <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <!-- Logo -->
@@ -78,10 +78,10 @@
         </div>
     </header>
 
-    <!-- Hero Banner -->
+    <!-- Hero Banner (Đã sửa lỗi hiển thị ảnh) -->
     <section class="relative h-[600px] flex items-center">
-        <!-- Ảnh nền (Thay bằng ảnh công trình thật của bạn) -->
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888086225-f6735e29fbd3?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center"></div>
+        <!-- Ảnh nền nhúng bằng style nội tuyến để tránh lỗi Tailwind CDN -->
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1541888086225-f6735e29fbd3?q=80&w=2070&auto=format&fit=crop');"></div>
         <!-- Lớp phủ tối -->
         <div class="absolute inset-0 bg-navyDark/70"></div>
         
@@ -106,13 +106,13 @@
         </div>
     </section>
 
-    <!-- About Section (Bố cục 50/50 HQN) -->
+    <!-- About Section -->
     <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
             <!-- Cột ảnh -->
             <div class="relative">
                 <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop" alt="Về Anvitech" class="rounded shadow-xl z-10 relative">
-                <!-- Khối trang trí Bulidx style -->
+                <!-- Khối trang trí -->
                 <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-orange -z-10 rounded"></div>
                 <div class="absolute top-1/2 -translate-y-1/2 -right-12 bg-navy text-white p-6 rounded shadow-lg hidden lg:block">
                     <h3 class="text-4xl font-extrabold text-orange mb-1">10+</h3>
@@ -145,7 +145,7 @@
         </div>
     </section>
 
-    <!-- Services Section (Bulidx Cards) -->
+    <!-- Services Section -->
     <section id="services" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-16">
@@ -154,7 +154,6 @@
                 <div class="w-16 h-1 bg-orange mx-auto mt-4"></div>
             </div>
 
-            <!-- CSS Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Card 1 -->
                 <div class="bg-white p-8 group hover:-translate-y-2 transition duration-300 border-b-4 border-transparent hover:border-orange shadow-sm hover:shadow-xl relative overflow-hidden">
@@ -196,7 +195,7 @@
                     <a href="#" class="text-navy font-bold group-hover:text-orange text-sm"><i class="fa-solid fa-plus mr-1"></i> CHI TIẾT</a>
                 </div>
                 
-                <!-- Khối liên hệ nhanh (Thay cho ô trống thứ 6) -->
+                <!-- Khối liên hệ nhanh -->
                 <div class="bg-navy p-8 flex flex-col justify-center items-center text-center shadow-xl">
                     <div class="text-white text-5xl mb-4"><i class="fa-solid fa-headset"></i></div>
                     <h3 class="text-xl font-bold text-white mb-2">Cần Tư Vấn Kỹ Thuật?</h3>
@@ -209,7 +208,7 @@
         </div>
     </section>
 
-    <!-- Stats Section (Bulidx style banner) -->
+    <!-- Stats Section -->
     <section class="bg-navyDark py-16 relative">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-gray-700">
             <div>
@@ -281,7 +280,7 @@
         </div>
         
         <div class="border-t border-gray-800 text-center pt-8 text-sm">
-            <p>&copy; 2026 Anvitech. Bảo lưu mọi quyền. Thiết kế theo phong cách Bulidx & HQN.</p>
+            <p>&copy; 2026 Anvitech. Bảo lưu mọi quyền.</p>
         </div>
     </footer>
 
