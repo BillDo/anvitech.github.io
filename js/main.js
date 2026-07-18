@@ -139,234 +139,116 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── Lightbox & Phân Trang cho "Ảnh Thực Tế" ──────────────────────────────
     const projectsList = [
         {
-            key: 'mrs-d-villa',
-            title: 'MRS D VILLA - CẦN THƠ',
-            coverUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
+            key: 'solar-dan-dung',
+            title: 'HỆ THỐNG ĐIỆN MẶT TRỜI DÂN DỤNG - BIỆT THỰ HÀ ĐÔNG',
+            coverUrl: 'https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=800&q=80',
             images: [
                 {
-                    url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Phối cảnh mặt tiền biệt thự tân cổ điển đẳng cấp'
+                    url: 'https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=1200&q=80',
+                    desc: 'Lắp đặt tấm pin mặt trời áp mái công suất 15kWp'
                 },
                 {
-                    url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Không gian phòng khách chính với thiết kế sang trọng'
+                    url: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80',
+                    desc: 'Sử dụng tấm pin mono tinh thể cao cấp đạt hiệu suất tối đa'
                 },
                 {
-                    url: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Phòng ngủ master tông ấm cúng và tinh tế'
-                },
-                {
-                    url: 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Khu vực bếp nấu đầy đủ tiện nghi cao cấp'
+                    url: 'https://images.unsplash.com/photo-1620038650424-85e6517e290e?auto=format&fit=crop&w=1200&q=80',
+                    desc: 'Hệ thống inverter và tủ bảo vệ AC/DC thông minh trong nhà'
                 }
             ]
         },
         {
-            key: 'mr-a-oceanpark',
-            title: 'MR A VILLA - OCEANPARK GIA LÂM',
-            coverUrl: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80',
+            key: 'solar-cong-nghiep',
+            title: 'ĐIỆN MẶT TRỜI ÁP MÁI NHÀ XƯỞNG - KCN BÌNH DƯƠNG',
+            coverUrl: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=800&q=80',
             images: [
                 {
-                    url: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Góc phòng khách kiến trúc bán cổ điển kết hợp Đông Dương'
+                    url: 'https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1200&q=80',
+                    desc: 'Hệ thống điện mặt trời công nghiệp quy mô 1.2 MWp'
                 },
                 {
-                    url: 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Không gian bàn ăn và tủ rượu âm tường tinh tế'
+                    url: 'https://images.unsplash.com/photo-1548613053-220a29df10dc?auto=format&fit=crop&w=1200&q=80',
+                    desc: 'Hàng ngàn tấm pin mặt trời được lắp đặt song song chuẩn kỹ thuật'
                 },
                 {
-                    url: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Phòng tắm đứng ốp đá marble vân mây sang trọng'
+                    url: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1200&q=80',
+                    desc: 'Góp phần chuyển đổi xanh và giảm chi phí vận hành cho nhà máy'
                 }
             ]
         },
         {
-            key: 'mr-a-mizuki',
-            title: 'MR A VILLA - MIZUKI PARK',
-            coverUrl: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80',
+            key: 'dien-cong-nghiep',
+            title: 'HỆ THỐNG TỦ ĐIỆN VÀ PHÂN PHỐI NGUỒN - NHÀ MÁY THÉP',
+            coverUrl: 'https://images.unsplash.com/photo-1621905252507-b354bc25edac?auto=format&fit=crop&w=800&q=80',
             images: [
                 {
-                    url: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Phòng khách Modern Classic thời thượng'
+                    url: 'https://images.unsplash.com/photo-1621905252507-b354bc25edac?auto=format&fit=crop&w=1200&q=80',
+                    desc: 'Lắp đặt tủ điện phân phối chính MSB và thang máng cáp'
                 },
                 {
-                    url: 'https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Nội thất phòng khách cận cảnh với chất liệu gỗ tự nhiên'
+                    url: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80',
+                    desc: 'Hệ thống điều khiển lập trình PLC tự động hóa dây chuyền'
                 },
                 {
-                    url: 'https://images.unsplash.com/photo-1617806118233-18e1db207f62?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Chi tiết trang trí vách tivi và phào chỉ hiện đại'
+                    url: 'https://images.unsplash.com/photo-1601524909162-be87252be298?auto=format&fit=crop&w=1200&q=80',
+                    desc: 'Đảm bảo tiêu chuẩn an toàn chống rò rỉ điện tuyệt đối'
                 }
             ]
         },
         {
-            key: 'happy-house',
-            title: 'HAPPY HOUSE - QUẬN 2',
-            coverUrl: 'https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=800&q=80',
+            key: 'hvac-chiller',
+            title: 'HỆ THỐNG ĐIỀU HÒA TRUNG TÂM CHILLER - TOÀ NHÀ AN KHÁNH',
+            coverUrl: 'https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&w=800&q=80',
             images: [
                 {
-                    url: 'https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Phòng khách căn hộ chung cư phong cách tối giản Bắc Âu'
+                    url: 'https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&w=1200&q=80',
+                    desc: 'Hệ thống giải nhiệt nước Chiller lắp đặt trên tầng mái tòa nhà'
                 },
                 {
-                    url: 'https://images.unsplash.com/photo-1556911220-f1a5340f1fd6?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Bếp mở kết nối với phòng khách tạo cảm giác rộng rãi'
+                    url: 'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80',
+                    desc: 'Đường ống gió và xử lý không khí trung tâm AHU vận hành êm ái'
                 },
                 {
-                    url: 'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Phòng ngủ nhỏ thiết kế thông minh tối ưu diện tích'
+                    url: 'https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=1200&q=80',
+                    desc: 'Đảm bảo thông thoáng gió và lọc khí sạch toàn bộ văn phòng'
                 }
             ]
         },
         {
-            key: 'biet-thu-tay-ninh',
-            title: 'BIỆT THỰ TÂY NINH',
-            coverUrl: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80',
+            key: 'co-khi-nha-xuong',
+            title: 'GIA CÔNG & LẮP ĐẶT KẾT CẤU THÉP KHUNG NHÀ KHO',
+            coverUrl: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80',
             images: [
                 {
-                    url: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Mặt tiền biệt thự vườn trệt hiện đại'
+                    url: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
+                    desc: 'Lắp đặt khung kèo kết cấu thép chịu lực cao cấp cho nhà kho công nghiệp'
                 },
                 {
-                    url: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Hành lang sân vườn thoáng mát bao quanh nhà'
+                    url: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
+                    desc: 'Gia công hàn cơ khí chi tiết, đạt độ bền cơ học cao nhất'
                 },
                 {
-                    url: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Phòng sinh hoạt chung gia đình ngập tràn ánh sáng tự nhiên'
+                    url: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1200&q=80',
+                    desc: 'Lắp đặt đường dẫn ống dẫn khí nén và phụ trợ công nghiệp'
                 }
             ]
         },
         {
-            key: 'penthouse-grand',
-            title: 'PENTHOUSE GRAND RIVERSIDE',
-            coverUrl: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80',
+            key: 'thang-may-nang-ha',
+            title: 'LẮP ĐẶT THANG MÁY GIA ĐÌNH & BÀN NÂNG THỦY LỰC',
+            coverUrl: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80',
             images: [
                 {
-                    url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Phòng khách thông tầng Penthouse ngắm trọn view sông'
+                    url: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80',
+                    desc: 'Thang máy kính gia đình sang trọng sử dụng công nghệ thủy lực mượt mà'
                 },
                 {
-                    url: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Ban công rộng thoáng nhìn ra toàn cảnh thành phố'
+                    url: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=80',
+                    desc: 'Lắp đặt sàn nâng tự động Dock Leveler tại kho xuất nhập hàng'
                 },
                 {
-                    url: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Phòng ngủ phụ cho khách đầy đủ tiện nghi như khách sạn'
-                }
-            ]
-        },
-        {
-            key: 'sky-garden-apt',
-            title: 'MR B APARTMENT - SKY GARDEN',
-            coverUrl: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=800&q=80',
-            images: [
-                {
-                    url: 'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Phòng khách căn hộ chung cư phong cách Nhật Bản tối giản'
-                },
-                {
-                    url: 'https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Phòng ngủ ấm cúng ngập tràn ánh nắng nhẹ ban mai'
-                },
-                {
-                    url: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Khu vực kệ sách kết hợp bàn làm việc tại nhà'
-                }
-            ]
-        },
-        {
-            key: 'mrs-l-house',
-            title: 'DỰ ÁN CẢI TẠO - MRS L HOUSE',
-            coverUrl: 'https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=800&q=80',
-            images: [
-                {
-                    url: 'https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Không gian phòng bếp hiện đại được cải tạo mới hoàn toàn'
-                },
-                {
-                    url: 'https://images.unsplash.com/photo-1556911220-f1a5340f1fd6?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Chi tiết bồn rửa chén và các trang thiết bị tủ bếp'
-                },
-                {
-                    url: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Bàn ăn nhỏ nhắn, ấm cúng dành cho gia đình 4 người'
-                }
-            ]
-        },
-        {
-            key: 'phu-my-hung-villa',
-            title: 'MR C VILLA - PHÚ MỸ HƯNG',
-            coverUrl: 'https://images.unsplash.com/photo-1618221381711-42ca8ab6e908?auto=format&fit=crop&w=800&q=80',
-            images: [
-                {
-                    url: 'https://images.unsplash.com/photo-1618221381711-42ca8ab6e908?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Biệt thự tân cổ điển xa hoa và bề thế tại Phú Mỹ Hưng'
-                },
-                {
-                    url: 'https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Đồ nội thất bọc da cao cấp kết hợp bàn đá tự nhiên'
-                },
-                {
-                    url: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Khu vực cầu thang xoắn ốc được ốp đá hoa cương tinh xảo'
-                }
-            ]
-        },
-        {
-            key: 'green-park-villa',
-            title: 'VILLA GREEN PARK - HÀ NỘI',
-            coverUrl: 'https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=800&q=80',
-            images: [
-                {
-                    url: 'https://images.unsplash.com/photo-1615874959474-d609969a20ed?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Không gian sống xanh mát ngập tràn sắc hoa cỏ thiên nhiên'
-                },
-                {
-                    url: 'https://images.unsplash.com/photo-1617806118233-18e1db207f62?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Phòng ngủ nhỏ gọn cho bé với tông màu sắc năng động'
-                },
-                {
-                    url: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Mặt bằng phòng sinh hoạt chung hiện đại và tinh tế'
-                }
-            ]
-        },
-        {
-            key: 'skyline-penthouse',
-            title: 'PENTHOUSE SKYLINE - QUẬN 7',
-            coverUrl: 'https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=800&q=80',
-            images: [
-                {
-                    url: 'https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Góc thư giãn riêng tư sang chảnh bên cạnh ô kính lớn'
-                },
-                {
-                    url: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Ban công rộng thoáng nhìn ra toàn cảnh thành phố'
-                },
-                {
-                    url: 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Phòng tắm bồn độc lập hiện đại sang trọng chuẩn resort'
-                }
-            ]
-        },
-        {
-            key: 'tan-binh-townhouse',
-            title: 'MR H TOWNHOUSE - TÂN BÌNH',
-            coverUrl: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=800&q=80',
-            images: [
-                {
-                    url: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Phòng ngủ sang trọng phong cách đương đại ấm cúng'
-                },
-                {
-                    url: 'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Khu vực làm việc nhỏ gọn bên cạnh giường ngủ'
-                },
-                {
-                    url: 'https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&w=1200&q=80',
-                    desc: 'Tủ quần áo thông minh với cánh kính cao cấp'
+                    url: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80',
+                    desc: 'Bàn nâng chữ X thủy lực hỗ trợ nâng hạ pallet hàng hóa tự động'
                 }
             ]
         }
@@ -412,8 +294,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="real-photo-img-wrap">
                     <img src="${proj.coverUrl}" alt="${proj.title}" loading="lazy">
                     <div class="real-photo-brand">
-                        <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h14v-8h3L12 3zm0 4.5c1.93 0 3.5 1.57 3.5 3.5s-1.57 3.5-3.5 3.5-3.5-1.57-3.5-3.5 1.57-3.5 3.5-3.5z"/></svg>
-                        <span>HQN INTERIOR</span>
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+                        <span>ANVITECH M&E</span>
                     </div>
                 </div>
                 <div class="real-photo-info">
@@ -588,6 +470,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         }, { passive: true });
+    }
+
+    // ── Interactive Tab Switcher for Services ───────────────────────────────
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    if (tabButtons.length > 0 && tabPanes.length > 0) {
+        tabButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetTab = btn.getAttribute('data-tab');
+
+                // Remove active classes
+                tabButtons.forEach(b => b.classList.remove('active'));
+                tabPanes.forEach(p => p.classList.remove('active'));
+
+                // Add active classes
+                btn.classList.add('active');
+                const activePane = document.getElementById(`tab-${targetTab}`);
+                if (activePane) {
+                    activePane.classList.add('active');
+                }
+            });
+        });
     }
 
     // Initialize dynamic grid
