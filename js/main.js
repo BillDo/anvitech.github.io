@@ -38,16 +38,16 @@ document.addEventListener('DOMContentLoaded', () => {
     revealOnScroll(); // Trigger once on load
 
     // ── Testimonials Slider ──────────────────────────────────────────────────
-    const track      = document.getElementById('testimonials-track');
-    const btnPrev    = document.getElementById('testimonial-prev');
-    const btnNext    = document.getElementById('testimonial-next');
-    const dotsWrap   = document.getElementById('testimonial-dots');
+    const track = document.getElementById('testimonials-track');
+    const btnPrev = document.getElementById('testimonial-prev');
+    const btnNext = document.getElementById('testimonial-next');
+    const dotsWrap = document.getElementById('testimonial-dots');
 
     if (track && btnPrev && btnNext && dotsWrap) {
-        const cards      = Array.from(track.querySelectorAll('.testimonial-card'));
-        const total      = cards.length;
+        const cards = Array.from(track.querySelectorAll('.testimonial-card'));
+        const total = cards.length;
         let currentIndex = 0;
-        let autoTimer    = null;
+        let autoTimer = null;
 
         // How many cards are visible at once?
         function getVisible() {
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Build dots
         function buildDots() {
             dotsWrap.innerHTML = '';
-            const visible   = getVisible();
+            const visible = getVisible();
             const numGroups = Math.ceil(total / visible);
             for (let i = 0; i < numGroups; i++) {
                 const dot = document.createElement('button');
@@ -71,21 +71,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function updateDots() {
-            const visible   = getVisible();
-            const groupIdx  = Math.floor(currentIndex / visible);
-            const dots      = dotsWrap.querySelectorAll('.slider-dot');
+            const visible = getVisible();
+            const groupIdx = Math.floor(currentIndex / visible);
+            const dots = dotsWrap.querySelectorAll('.slider-dot');
             dots.forEach((d, i) => d.classList.toggle('active', i === groupIdx));
         }
 
         function goTo(index) {
-            const visible   = getVisible();
-            const maxIndex  = total - visible;
-            currentIndex    = Math.max(0, Math.min(index, maxIndex));
+            const visible = getVisible();
+            const maxIndex = total - visible;
+            currentIndex = Math.max(0, Math.min(index, maxIndex));
 
             // Card width + gap
-            const cardEl    = cards[0];
-            const gap       = parseFloat(getComputedStyle(track).gap) || 32;
-            const offset    = currentIndex * (cardEl.offsetWidth + gap);
+            const cardEl = cards[0];
+            const gap = parseFloat(getComputedStyle(track).gap) || 32;
+            const offset = currentIndex * (cardEl.offsetWidth + gap);
 
             track.style.transform = `translateX(-${offset}px)`;
 
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function startAuto() {
             autoTimer = setInterval(() => {
-                const visible  = getVisible();
+                const visible = getVisible();
                 const maxIndex = total - visible;
                 if (currentIndex >= maxIndex) {
                     goTo(0);
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             key: 'dien-cong-nghiep',
             title: 'HỆ THỐNG TỦ ĐIỆN VÀ PHÂN PHỐI NGUỒN - NHÀ MÁY THÉP',
-            coverUrl: 'images/images/tu-dien-phan-phoi-cho-nha-xuong-san-xuat.jpg?auto=format&fit=crop&w=800&q=80',
+            coverUrl: 'images/tu-dien-phan-phoi-cho-nha-xuong-san-xuat.jpg?auto=format&fit=crop&w=800&q=80',
             images: [
                 {
                     url: 'https://images.unsplash.com/photo-1621905252507-b354bc25edac?auto=format&fit=crop&w=1200&q=80',
@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentProject = null;
     let currentImgIndex = 0;
-    let openLightbox = () => {};
+    let openLightbox = () => { };
 
     // Render Grid and Pagination
     function renderProjectsGrid() {
